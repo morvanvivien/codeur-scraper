@@ -57,7 +57,7 @@ Example input:
 }
 ```
 
-## Three ways to use it
+## Four ways to use it
 
 ### 1. Apify console, no code
 
@@ -122,6 +122,20 @@ for item in client.dataset(run.default_dataset_id).iterate_items():
 ```
 
 The complete file is [`examples/run.py`](examples/run.py). Never put your token in the code: read it from the `APIFY_TOKEN` environment variable as above.
+
+### 4. REST API on RapidAPI, one key for all your APIs
+
+If you already use RapidAPI, the same data is available as a plain REST API with monthly plans and a free tier: [codeur-freelance-projects-france on RapidAPI](https://rapidapi.com/VivienMORVAN/api/codeur-freelance-projects-france). No Apify account needed, billing goes through your RapidAPI subscription.
+
+```bash
+curl -X POST "https://codeur-freelance-projects-france.p.rapidapi.com/v2/acts/bibian~codeur-projects-scraper/run-sync-get-dataset-items?clean=true" \
+  -H "x-rapidapi-key: <YOUR_RAPIDAPI_KEY>" \
+  -H "x-rapidapi-host: codeur-freelance-projects-france.p.rapidapi.com" \
+  -H "content-type: application/json" \
+  -d '{"keywords": "wordpress", "publishedWithinDays": 14, "onlyOpen": true, "maxItems": 20}'
+```
+
+The response is the JSON array of projects, with the same fields as above.
 
 ## Pricing
 
