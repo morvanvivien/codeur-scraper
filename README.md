@@ -125,7 +125,7 @@ The complete file is [`examples/run.py`](examples/run.py). Never put your token 
 
 ### 4. REST API on RapidAPI, one key for all your APIs
 
-If you already use RapidAPI, the same data is available as a plain REST API with monthly plans and a free tier: [codeur-freelance-projects-france on RapidAPI](https://rapidapi.com/VivienMORVAN/api/codeur-freelance-projects-france). No Apify account needed, billing goes through your RapidAPI subscription.
+If you already use RapidAPI, the same data is available as a plain REST API with monthly plans and a free tier: [codeur-freelance-projects-france on RapidAPI](https://rapidapi.com/VivienMORVAN/api/codeur-freelance-projects-france), also listed on [Zyla API Hub](https://zylalabs.com/api-marketplace/company+data/codeur+freelance+projects+france+api/14514). No Apify account needed, billing goes through your marketplace subscription.
 
 ```bash
 curl -X POST "https://codeur-freelance-projects-france.p.rapidapi.com/v2/acts/bibian~codeur-projects-scraper/run-sync-get-dataset-items?clean=true" \
